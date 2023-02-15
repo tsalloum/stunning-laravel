@@ -10,3 +10,13 @@ pwd
 sudo cp .env.example .env
 sudo vim .env
 sudo php artisan key:generate
+
+apache2 -v
+which apache2
+cd /usr/sbin
+ls
+cd /etc/apache2
+sudo vim apache2.conf
+cd sites-enabled
+sudo vim 000-default.conf
+sudo systemctl restart apache2
