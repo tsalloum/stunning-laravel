@@ -1,13 +1,17 @@
+Project 1
+
 IP Address: 54.75.92.50
 
-DEFINITIONS:
+COMMANDS:
 
-'sudo' is a command that allows authorized users to temporarily gain superuser privileges to execute specific commands, perform administrative tasks, or modify system files. To use sudo, a user must have the appropriate permissions, which can be granted by the system administrator. 
+'sudo' is a command that allows authorized users to temporarily gain superuser(root) privileges to execute specific commands, perform administrative tasks, or modify system files. To use sudo, a user must have the appropriate permissions, which can be granted by the system administrator. 
 
 'apt-get' is a command-line tool that assists with the management of packages in Linux. Its primary function is to obtain information and packages from verified sources, enabling the installation, upgrading, management and removal of software packages and their corresponding dependencies through interaction with the APT library.
 
 
-STEPS:
+STEP-BY-STEP:
+
+ssh to the ubuntu server using PuTTY with the .ppk private key that is generated from the .pem private key using PuTTYgen for conversion
 
 sudo apt-get install apache2 mysql-server php-mysql php libapache2-mod-php
 sudo apt update
@@ -30,7 +34,7 @@ sudo systemctl restart apache2
 
 cd /var/www/html
 pwd
-sudo git clone https://github.com/tsalloum/stunning-laravel
+sudo git clone https://github.com/tsalloum/stunning-laravel.git
 
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 cd stunning-laravel/
