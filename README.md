@@ -9,19 +9,22 @@ DEFINITIONS:
 
 STEPS:
 
-sudo apt-get install apache2
-sudo apt-get install mysql-server
-sudo apt-get install php-mysql
-sudo apt-get install php
-sudo apt-get install libapache2-mod-php
-
-sudo apt-get install php-mcrypt
-
-sudo apt-get install php-pear
-sudo apt-get install curl
-sudo apt-get install php-curl
-sudo apt-get install php-cli
-sudo apt-get install git
+sudo apt-get install apache2 mysql-server php-mysql php libapache2-mod-php
+sudo apt update
+sudo apt install -y build-essential
+gcc --version
+make --version
+sudo apt install php php-pear php-dev libmcrypt-dev
+which pecl 
+sudo pecl channel-update pecl.php.net
+sudo pecl update-channels
+sudo pecl search mcrypt
+sudo pecl install mcrypt
+sudo vim /etc/php/*/cli/php.ini
+sudo vim /etc/php/*/apache2/php.ini
+php -m | grep mcrypt
+sudo systemctl restart apache2
+sudo apt-get install php-pear curl php-curl php-cli git
 a2enmod rewrite
 sudo systemctl restart apache2
 
