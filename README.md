@@ -20,3 +20,7 @@ sudo vim apache2.conf
 cd sites-enabled
 sudo vim 000-default.conf
 sudo systemctl restart apache2
+
+cd /var/www/html/stunning-laravel
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
